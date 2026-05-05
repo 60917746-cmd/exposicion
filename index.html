@@ -1,144 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Virtual - TechStore Fashion</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ENCABEZADO -->
-<h1 id="inicio">TechStore Fashion</h1>
-<p>Tu tienda de ropa y tecnología favorita</p>
+<div class="container mt-4">
 
-<!-- MENÚ -->
-<a href="#inicio">Inicio</a> |
-<a href="#categorias">Categorías</a> |
-<a href="#productos">Productos</a> |
-<a href="#tallas">Tallas</a> |
-<a href="#contacto">Contacto</a>
+    <div class="text-center mb-4">
+        <h1 id="inicio">TechStore Fashion</h1>
+        <p>Tu tienda de ropa y tecnología favorita</p>
+    </div>
 
-<br><br>
 
-<!-- SECCIÓN INICIO -->
-<h2>Bienvenido</h2>
-<p>Explora nuestras nuevas colecciones de temporada.</p>
+    <div class="text-center mb-4">
+        <a href="#inicio" class="btn btn-outline-primary">Inicio</a>
+        <a href="#categorias" class="btn btn-outline-primary">Categorías</a>
+        <a href="#productos" class="btn btn-outline-primary">Productos</a>
+        <a href="#tallas" class="btn btn-outline-primary">Tallas</a>
+        <a href="#contacto" class="btn btn-outline-primary">Contacto</a>
+    </div>
 
-<a href="#categorias">
-    <button>Ver Categorías</button>
-</a>
 
-<br><br><br>
+    <div class="mb-4">
+        <h2>Bienvenido</h2>
+        <p>Explora nuestras nuevas colecciones de temporada.</p>
+        <a href="#categorias" class="btn btn-success">Ver Categorías</a>
+    </div>
 
-<!-- SECCIÓN CATEGORÍAS (LISTA DESORDENADA Y ANIDADA) -->
-<h2 id="categorias">Nuestras Colecciones</h2>
-<ul>
-    <li>
-        <strong>Ropa de Hombre</strong>
-        <ul>
-            <li>Camisas Oxford</li>
-            <li>Pantalones Jean</li>
-        </ul>
-    </li>
-    <li>
-        <strong>Ropa de Mujer</strong>
-        <ul>
-            <li>Vestidos de Verano</li>
-            <li>Blusas Casuales</li>
-        </ul>
-    </li>
-</ul>
+    <div class="mb-4" id="categorias">
+        <h2>Nuestras Colecciones</h2>
 
-<br>
+        <div class="row">
+            <div class="col-md-6">
+                <strong>Ropa de Hombre</strong>
+                <ul>
+                    <li>Camisas Oxford</li>
+                    <li>Pantalones Jean</li>
+                </ul>
+            </div>
 
-<!-- SECCIÓN PASOS DE COMPRA (LISTA ORDENADA) -->
-<h3>¿Cómo comprar?</h3>
-<ol>
-    <li>Selecciona tu prenda favorita.</li>
-    <li>Revisa la tabla de tallas abajo.</li>
-    <li>Llena el formulario de contacto para el pedido.</li>
-</ol>
+            <div class="col-md-6">
+                <strong>Ropa de Mujer</strong>
+                <ul>
+                    <li>Vestidos de Verano</li>
+                    <li>Blusas Casuales</li>
+                </ul>
+            </div>
+        </div>
 
-<br><br><br>
+        <h3>¿Cómo comprar?</h3>
+        <ol>
+            <li>Selecciona tu prenda favorita.</li>
+            <li>Revisa la tabla de tallas abajo.</li>
+            <li>Llena el formulario de contacto.</li>
+        </ol>
+    </div>
 
-<!-- SECCIÓN PRODUCTOS -->
-<h2 id="productos">Productos Destacados</h2>
+    <div class="mb-4" id="productos">
+        <h2>Productos Destacados</h2>
 
-<table border="1">
-    <tr>
-        <th>Producto</th>
-        <th>Precio</th>
-        <th>Imagen</th>
-    </tr>
+        <table class="table table-bordered text-center">
+            <tr class="table-dark">
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+            </tr>
 
-    <tr>
-        <td>Casaca Térmica</td>
-        <td>S/ 180</td>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RV-042S6dU5O4EzEtzIKjc-cqRwV0vBoUA&s" alt="Casaca"></td>
-    </tr>
+            <tr>
+                <td>Casaca Térmica</td>
+                <td>S/ 180</td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0RV-042S6dU5O4EzEtzIKjc-cqRwV0vBoUA&s" width="100"></td>
+            </tr>
 
-    <tr>
-        <td>Pantalón Chino</td>
-        <td>S/ 90</td>
-        <td><img src="data:image/jpeg;base64,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" alt="Pantalon"></td>
-    </tr>
-    <tr>
-        <td> Camara digital</td>
-        <td>S/150</td>
-        <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEKJzop72pU61sKiOtxHifH2Q6KOMtX3fYTQ&s" alt="Camara digital"></td>
-    </tr>
-    <tr>
-        <td>Laptop</td>
-        <td>1500</td>
-        <td> <img src="https://plazavea.vteximg.com.br/arquivos/categoria-laptop-core-i3.png" alt="Laptop"></td>
-    </tr>
-</table>
+            <tr>
+                <td>Pantalón Chino</td>
+                <td>S/ 90</td>
+                <td><img src="data:image/jpeg;base64,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" width="100"></td>
+            </tr>
 
-<br><br><br>
+            <tr>
+                <td>Cámara digital</td>
+                <td>S/150</td>
+                <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEKJzop72pU61sKiOtxHifH2Q6KOMtX3fYTQ&s" width="100"></td>
+            </tr>
 
-<!-- SECCIÓN TALLAS (USANDO ROWSPAN Y COLSPAN) -->
-<h2 id="tallas">Guía de Tallas</h2>
-<table border="1">
-    <tr>
-        <th rowspan="2">Tipo de Prenda</th>
-        <th colspan="3">Medidas Disponibles</th>
-    </tr>
-    <tr>
-        <td>S (Small)</td>
-        <td>M (Medium)</td>
-        <td>L (Large)</td>
-    </tr>
-    <tr>
-        <td>Polos / Camisas</td>
-        <td>36</td>
-        <td>38</td>
-        <td>40</td>
-    </tr>
-</table>
+            <tr>
+                <td>Laptop</td>
+                <td>S/1500</td>
+                <td><img src="https://plazavea.vteximg.com.br/arquivos/categoria-laptop-core-i3.png" width="100"></td>
+            </tr>
+        </table>
+    </div>
+->
+    <div class="mb-4" id="tallas">
+        <h2>Guía de Tallas</h2>
 
-<br><br><br>
+        <table class="table table-bordered text-center">
+            <tr>
+                <th rowspan="2">Tipo</th>
+                <th colspan="3">Medidas</th>
+            </tr>
+            <tr>
+                <td>S</td>
+                <td>M</td>
+                <td>L</td>
+            </tr>
+            <tr>
+                <td>Camisas</td>
+                <td>36</td>
+                <td>38</td>
+                <td>40</td>
+            </tr>
+        </table>
+    </div>
 
-<!-- SECCIÓN CONTACTO -->
-<h2 id="contacto">Realizar Pedido</h2>
+    <div class="mb-4" id="contacto">
+        <h2>Realizar Pedido</h2>
 
-<label>Nombre:</label><br>
-<input type="text"><br><br>
+        <div class="mb-3">
+            <label>Nombre</label>
+            <input type="text" class="form-control">
+        </div>
 
-<label>Correo electrónico:</label><br>
-<input type="email"><br><br>
+        <div class="mb-3">
+            <label>Correo</label>
+            <input type="email" class="form-control">
+        </div>
 
-<label>Detalle de la prenda:</label><br>
-<input type="text"><br><br>
+        <div class="mb-3">
+            <label>Categoría</label>
+            <select class="form-select">
+                <option>Ropa de Hombre</option>
+                <option>Ropa de Mujer</option>
+                <option>Tecnología</option>
+            </select>
+        </div>
 
-<input type="submit" value="Enviar Pedido">
+        <div class="mb-3">
+            <label>Detalle</label>
+            <input type="text" class="form-control">
+        </div>
 
-<br><br>
+        <button class="btn btn-primary">Enviar Pedido</button>
 
-<a href="#inicio">
-    <button>Volver al Inicio</button>
-</a>
+        <div class="mt-3">
+            <a href="#inicio" class="btn btn-secondary">Volver al Inicio</a>
+        </div>
+    </div>
 
-<br><br>
+</div>
 
+<footer class="bg-dark text-white text-center p-3">
+    <p>  TECHSTORE FASHION</p>
+    <p>CORREO: techstore@email.com</p>
+</footer>
 
 </body>
 </html>
