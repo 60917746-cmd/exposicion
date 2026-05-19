@@ -72,4 +72,122 @@ footer {
     transform: translateY(-3px);
     transition: 0.3s;
 }
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif;
+}
 
+h1 {
+    background: linear-gradient(135deg, #0d6efd, #4dabf7);
+    color: #2AD449;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid #0b5ed7;
+}
+
+
+p {
+    color: #555;
+}
+
+
+.container > div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #dbe4f0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+
+h2 {
+    color: brown;
+    
+    padding-left: 10px;
+}
+
+
+table {
+    background-color: white;
+}
+
+table th {
+    background-color: #0d6efd;
+    color: white;
+}
+
+
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+.talla-section{
+    display: none;
+}
+
+.btn {
+    border-radius: 8px;
+}
+
+
+input, select {
+    border-radius: 8px !important;
+    border: 1px solid #ccd6e0 !important;
+}
+
+
+footer {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: white;
+    border-top: 3px solid #084298;
+}
+
+.container > div:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+.menu-btn {
+background: #0d6efd;
+color: white;
+border: none;
+padding: 10px 15px;
+border-radius: 6px;
+cursor: pointer;
+transition: background 0.3s ease;
+}
+.menu-btn:hover {
+background: skyblue;
+}
+#sidebar {
+position: fixed;
+top: 0;
+left: -250px;
+width: 250px;
+height: 100%;
+background: blue;
+color: black;
+padding: 20px;
+transition: left 0.3s ease;
+z-index: 1000;
+box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+}
+
+#sidebar.active {
+left: 0;
+}
+
+#sidebar nav a {
+display: block;
+color: white;
+text-decoration: none;
+margin: 12px 0;
+padding: 10px;
+border-radius: 6px;
+transition: background 0.3s ease;
+}
+
+#sidebar nav a:hover {
+background: #4dabf7;
+}
